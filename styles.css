@@ -1,0 +1,76 @@
+/* Estilos globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Estilos de la página de producto */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.product-image {
+  flex: 1 0 100%;
+  margin-bottom: 20px;
+}
+
+.product-image img {
+  width: 100%;
+}
+
+.product-info {
+  flex: 1 0 100%;
+  margin-bottom: 20px;
+}
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.product-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="image"] {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos del footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #F5F5F5;
+  color: #666666;
+  font-size: 0.8rem;
+}
