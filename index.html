@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y87XMC18G7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Y87XMC18G7');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tele Latino Store</title>
+
+  <link rel="preload" href="unmes.png" as="image">
+  <link rel="preload" href="3meses.png" as="image">
+  <link rel="preload" href="6meses.png" as="image">
+  <link rel="preload" href="12meses.png" as="image">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="product-container">
+      <div class="product-image">
+        <img src="http://localhost:9898/Local/TeleLatinoStore/unmes.png" alt="Product Image" style="display: block;">
+<img src="http://localhost:9898/Local/TeleLatinoStore/agotado.png" alt="Agotado" class="agotado-img" style="display: none;">
+      </div>
+  
+      <div class="thumbnail-container">
+  <button class="thumbnail-button active" data-price="4.50" data-price-normal="5.90" porcentaje="23,73" data-months="1" data-available="true" data-img="http://localhost:9898/Local/TeleLatinoStore/unmes.png" value="1M">1 Mes</button>
+<button class="thumbnail-button" data-price="12.00" data-price-normal="15.90" porcentaje="24,53" data-months="3" data-available="false" data-img="http://localhost:9898/Local/TeleLatinoStore/3meses.png" value="3M">3 Meses</button>
+<button class="thumbnail-button" data-price="22.00" data-price-normal="29.90" porcentaje="26,4" data-months="6" data-available="false" data-img="http://localhost:9898/Local/TeleLatinoStore/6meses.png" value="6M">6 Meses</button>
+<button class="thumbnail-button" data-price="40.00" data-price-normal="48" porcentaje="16,67" data-months="12" data-available="false" data-img="http://localhost:9898/Local/TeleLatinoStore/12meses.png" value="12M">12 Meses</button>
+
+
+      <div class="product-info">
+        <h1>1 Mes</h1>
+        
+        <div class="prices">
+        <span class="normal-price">US$ 5.90</span>
+        <span class="offer-price">US$ 4.50</span>
+        <span class="discount-percentage">23,73% OFF</span>
+      </div>
+        <p>Dispositivos simultáneos: 3 TV + 3 Celulares
+<br>Canales en vivo (TV): +900 SD/HD
+<br>Canales en vivo (Celular): +600 SD/HD (720P)
+<br>Contenido VOD: +200,000 horas
+<br>HOT: Canales + VOD
+<br>Playback últimos 7 días</p>
+        <div id="smart-button-container">
+          <div style="text-align: center;">
+            <div id="paypal-button-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="imagen-footer">
+  <img src="http://localhost:9898/Local/TeleLatinoStore/logo.png" alt="logo">
+</div>
+
+
+  <footer>
+    <p>© 2023 Tele Latino Store</p>
+  </footer>
+  <script src="https://www.paypal.com/sdk/js?client-id=AfHXU2R5TcG1l1L0f69YAa67qJ-RsKHUh9-mYduiiaXMmxPj3P3_LHWba_yo7BE7pSyEg0W0c38nVDfw&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  
+<!--
+<script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal'
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"amount":{"currency_code":"USD","value":4.50}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+  </script> -->
+
+
+
+
+
+
+<script>
+const buttons = document.querySelectorAll('.thumbnail-button');
+
+
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    button.classList.add('active');
+ 
+    const img = button.getAttribute('data-img');
+    const price = button.getAttribute('data-price');
+    const priceNormal = button.getAttribute('data-price-normal');
+    const pricePorcentaje = button.getAttribute('porcentaje');
+    const paypalButtonContainer = document.getElementById('paypal-button-container');
+
+
+    const isProductAvailable = button.getAttribute('data-available') === 'true';
+
+
+   document.querySelector('.product-image img').setAttribute('src', img);
+    document.querySelector('.product-info h1').textContent = button.textContent;
+    document.querySelector('.offer-price').textContent = `US$ ${price}`;
+document.querySelector('.normal-price').textContent = `US$ ${priceNormal}`;
+document.querySelector('.discount-percentage').textContent = `${pricePorcentaje}% OFF`;
+
+const agotadoImg = document.querySelector('.agotado-img');
+
+    paypalButtonContainer.innerHTML = '';
+     if (!isProductAvailable) {
+
+agotadoImg.style.display = 'block';
+      
+} else { 
+agotadoImg.style.display = 'none';
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal'
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{"amount":{"currency_code":"USD","value":price}}]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Thank you for your payment!</h3>';
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      }
+    }).render('#paypal-button-container');}
+  });
+});
+
+
+</script>
+</body>
+</html>
