@@ -25,6 +25,10 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="plugin/components/Font Awesome/css/font-awesome.min.css">
      <link rel="stylesheet" href="plugin/whatsapp-chat-support.css">
+
+  <link rel="stylesheet" href="plugin/components/Font Awesome/css/font-awesome.min.css">
+     <link rel="stylesheet" href="plugin/whatsapp-chat-support.css">
+
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.5/dist/sweetalert2.all.min.js"></script>
@@ -464,6 +468,7 @@ fetch('https://maker.ifttt.com/trigger/pago_info/json/with/key/knrtffu4-53xX4KmS
 </script>
 
 <!-- 
+  <div class="wh<!-- 
   <div class="whatsapp-btn-container">
    <div class="ws-logo">
     <img src="http://localhost:9898/Local/TeleLatinoStore/ws.png" alt="logo" href="https://wa.me/56927381682">
@@ -515,5 +520,565 @@ fetch('https://maker.ifttt.com/trigger/pago_info/json/with/key/knrtffu4-53xX4KmS
 <script src="plugin/components/moment/moment-timezone-with-data.min.js"></script> <!-- spanish language (es) -->
 <script src="plugin/whatsapp-chat-support.js"></script>
 
+>>>>>>>-master
+upport wcs_fixed_right" id="button-w">
+    <div class="wcs_button_label">
+            Contáctanos
+        </div>  
+    <div class="wcs_button wcs_button_circle">
+        <span class="fa fa-whatsapp"></span>
+    </div>  
+ 
+    <div class="wcs_popup">
+        <div class="wcs_popup_close">
+            <span class="fa fa-close"></span>
+        </div>
+        <div class="wcs_popup_header">
+            <span class="fa fa-whatsapp"></span>
+            <strong>Servicio al cliente</strong>
+            
+            <div class="wcs_popup_header_description">¿Necesidad de ayuda? Chatea con nosotros en Whatsapp</div>
+
+        </div>  
+        <div class="wcs_popup_input" 
+            data-number="56993500575"
+            data-availability='{ "monday":"07:00-22:30", "tuesday":"07:00-22:30", "wednesday":"07:7030-22:30", "thursday":"07:00-22:30", "friday":"07:00-22:30", "saturday":"09:00-18:30", "sunday":"09:00-22:30" }'>
+            <input type="text" placeholder="Escribir pregunta!" />
+            <i class="fa fa-play"></i>
+        </div>
+        <div class="wcs_popup_avatar">
+            <img src="https://avatars.githubusercontent.com/janl?s=180" alt="">
+        </div>
+    </div>
+</div>
+
+>>>>>>> origin/master
+</body>
+</html>
+</head>
+<body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.5/dist/sweetalert2.all.min.js"></script>
+
+  <div class="container">
+    <div class="product-container">
+      <div class="product-image">
+        <img src="http://localhost:9898/Local/TeleLatinoStore/unmes.png" alt="Product Image" style="display: block;">
+<img src="http://localhost:9898/Local/TeleLatinoStore/agotado.png" alt="Agotado" class="agotado-img" style="display: none;">
+      </div>
+  
+      <div class="thumbnail-container">
+  <button class="thumbnail-button active" data-price="4.50" data-price-normal="5.90" porcentaje="23,73" data-months="1" data-available="true" data-img="http://localhost:9898/Local/TeleLatinoStore/unmes.png" value="1M">1 Mes</button>
+<button class="thumbnail-button" data-price="12.00" data-price-normal="15.90" porcentaje="24,53" data-months="3" data-available="true" data-img="http://localhost:9898/Local/TeleLatinoStore/3meses.png" value="3M">3 Meses</button>
+<button class="thumbnail-button" data-price="22.00" data-price-normal="29.90" porcentaje="26,4" data-months="6" data-available="true" data-img="http://localhost:9898/Local/TeleLatinoStore/6meses.png" value="6M">6 Meses</button>
+<button class="thumbnail-button" data-price="40.00" data-price-normal="48" porcentaje="16,67" data-months="12" data-available="false" data-img="http://localhost:9898/Local/TeleLatinoStore/12meses.png" value="12M">12 Meses</button>
+
+
+      <div class="product-info">
+        <h1>1 Mes</h1>
+        
+        <div class="prices">
+        <span class="normal-price">US$ 5.90</span>
+        <span class="offer-price">US$ 4.50</span>
+        <span class="discount-percentage">23,73% OFF</span>
+      </div>
+        <p>Dispositivos simultáneos: 3 TV + 3 Celulares
+<br>Canales en vivo (TV): +900 SD/HD
+<br>Canales en vivo (Celular): +600 SD/HD (720P)
+<br>Contenido VOD: +200,000 horas
+<br>HOT: Canales + VOD
+<br>Playback últimos 7 días</p>
+
+
+
+<form id="my-form">
+<div class="main-form-wrapper">
+  <div class="form-wrapper">
+    
+    <input type="text" id="nombre" name="nombre" placeholder="Nombre Apellido">
+    <input type="email" id="mail" name="mail" placeholder="Correo electrónico">
+    <p style="text-align: justify;"><b>Nota:</b> Asegúrate de ingresar un correo electrónico válido durante el proceso de compra. Este correo electrónico será utilizado para enviarte la información de la cuenta.</p>
+<button type="button" id="submit-button" onclick="validarCorreo()">Guardar</button>
+  </div>
+  <div id="confirmation-message" class="hidden chupala"></div>
+
+  <div id="loading" class="hidden">
+    <div class="loader"></div>
+  </div>
+
+</div>
+</form>
+
+
+
+
+
+
+        <div class="disabled-button" id="smart-button-container">
+
+          <div style="text-align: center;">
+            <div id="paypal-button-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="imagen-footer">
+  <img src="http://localhost:9898/Local/TeleLatinoStore/logo.png" alt="logo">
+</div>
+
+
+  <footer>
+    <p>© 2023 Tele Latino Store</p>
+  </footer>
+<!-- 
+  <script src="https://www.paypal.com/sdk/js?client-id=AfHXU2R5TcG1l1L0f69YAa67qJ-RsKHUh9-mYduiiaXMmxPj3P3_LHWba_yo7BE7pSyEg0W0c38nVDfw&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  
+-->
+
+<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+
+
+<script>
+
+function cambiarSesion(){
+
+const formWrapper = document.querySelector('.form-wrapper');
+
+const confirmationMessage = document.getElementById('confirmation-message');
+formWrapper.classList.remove('hidden');
+confirmationMessage.classList.add('hidden');
+}
+
+
+/*  
+document.addEventListener("DOMContentLoaded", function() {
+  // Leer la cookie
+  var cookie = document.cookie;
+
+  // Verificar si la información del correo electrónico está presente en la cookie
+  if (cookie.includes("correo=")) {
+    // La información del correo electrónico está guardada en la cookie
+
+   const formWrapper = document.querySelector('.form-wrapper');
+
+const confirmationMessage = document.getElementById('confirmation-message');
+formWrapper.classList.remove('hidden');
+confirmationMessage.classList.add('hidden');
+   alert("chupa1");
+    console.log("La información del correo electrónico está guardada en la cookie");
+    // Obtener el valor del correo electrónico de la cookie
+    var correo = cookie.match(/correo=([^;]+)/)[1];
+    console.log("Correo electrónico guardado: " + correo);
+  } else {
+   alert("chupa2");
+    // La información del correo electrónico no está guardada en la cookie
+    console.log("La información del correo electrónico no está guardada en la cookie");
+  }
+});
+  */
+
+function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal'
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"amount":{"currency_code":"USD","value":4.50}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+//const form = document.getElementById('my-form');
+//const formData = new FormData(form);
+const formData = new FormData(document.getElementById('my-form'));
+formData.append('newField', 'newFieldValue');
+//const orderDataString = JSON.stringify(orderData);
+//formData.append('orderData', orderDataString);
+fetch('https://formspree.io/f/xjvdaoyd', {
+  method: 'POST',
+  body: formData
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Error al enviar el formulario');
+  }
+  // La solicitud se envió correctamente
+  console.log('Formulario enviado');
+})
+.catch(error => {
+  console.error(error);
+});
+
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    } 
+
+initPayPalButton();
+
+
+function validarCorreo() {
+
+const smartButtonContainer = document.getElementById('smart-button-container');
+
+const correo = document.getElementById('mail').value;
+const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!regex.test(correo)) {
+    //alert('Correo electrónico inválido');
+    //return;
+
+Swal.fire({
+    title: 'Email no válido',
+    text: 'Para poder continuar con la compra, debe ingresar un correo electrónico válido.',
+    icon: 'warning',
+    
+    confirmButtonText: 'Aceptar'
+  });
+  return;
+
+
+}
+
+const formWrapper = document.querySelector('.form-wrapper');
+
+const confirmationMessage = document.getElementById('confirmation-message');
+
+document.getElementById("loading").classList.remove("hidden");
+
+confirmationMessage.classList.add('hidden');
+formWrapper.classList.add('hidden');
+
+setTimeout(function() {
+document.getElementById("loading").classList.remove("hidden");
+document.getElementById("loading").classList.add("hidden");
+smartButtonContainer.classList.remove("disabled-button");
+formWrapper.classList.add('hidden');
+
+
+const nombre = document.getElementById('nombre').value;
+const mail = document.getElementById('mail').value;
+//const message = `Sesión: <a href="mailto:${mail}">${mail}</a>`;
+
+const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" onclick="cambiarSesion()">Cambiar</a>`
+
+document.cookie = "nombre=" + nombre + "; correo=" + mail;
+
+confirmationMessage.innerHTML = message;
+    formWrapper.classList.add('hidden');
+    confirmationMessage.classList.remove('hidden');
+    
+  }, 1000);
+
+
+
+
+
+function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal'
+        },
+
+        createOrder: function(data, actions) {
+          return actions.order.create({
+            purchase_units: [{"amount":{"currency_code":"USD","value":4.50}}]
+          });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            // Full available details
+            console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+            // Show a success message within this page, e.g.
+            const element = document.getElementById('paypal-button-container');
+            element.innerHTML = '';
+            element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+//const form = document.getElementById('my-form');
+//const formData = new FormData(form);
+//const orderDataString = JSON.stringify(orderData);
+//formData.append('orderData', orderDataString);
+//formData.append('name', 'John Doe');
+const formData = new FormData(document.getElementById('my-form'));
+formData.append('newField', 'newFieldValue');
+
+fetch('https://formspree.io/f/xjvdaoyd', {
+  method: 'POST',
+  body: formData
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Error al enviar el formulario');
+  }
+  // La solicitud se envió correctamente
+  console.log('Formulario enviado');
+})
+.catch(error => {
+  console.error(error);
+});
+
+
+
+
+
+            // Or go to another URL:  actions.redirect('thank_you.html');
+            
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    } 
+  
+}
+
+
+
+</script>
+
+<script>
+
+
+const buttons = document.querySelectorAll('.thumbnail-button');
+
+
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+
+    
+    buttons.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    button.classList.add('active');
+ 
+    const img = button.getAttribute('data-img');
+    const price = button.getAttribute('data-price');
+    const priceNormal = button.getAttribute('data-price-normal');
+    const pricePorcentaje = button.getAttribute('porcentaje');
+    const paypalButtonContainer = document.getElementById('paypal-button-container');
+    const smartButtonContainer = document.getElementById('smart-button-container');
+
+    const isProductAvailable = button.getAttribute('data-available') === 'true';
+
+
+   document.querySelector('.product-image img').setAttribute('src', img);
+    document.querySelector('.product-info h1').textContent = button.textContent;
+    document.querySelector('.offer-price').textContent = `US$ ${price}`;
+document.querySelector('.normal-price').textContent = `US$ ${priceNormal}`;
+document.querySelector('.discount-percentage').textContent = `${pricePorcentaje}% OFF`;
+
+const agotadoImg = document.querySelector('.agotado-img');
+
+    paypalButtonContainer.innerHTML = '';
+
+<!-->
+
+     if (!isProductAvailable) {
+
+agotadoImg.style.display = 'block';
+smartButtonContainer.classList.add("disabled-button");      
+
+paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal'
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{"amount":{"currency_code":"USD","value":price}}]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+fetch('https://maker.ifttt.com/trigger/pago_info/json/with/key/knrtffu4-53xX4KmSxqYByUbObUZMvjXB-xRS9y9Nsp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({correo: 'example@mail.com'})
+      });
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      }
+    }).render('#paypal-button-container');
+} 
+
+else {
+ 
+smartButtonContainer.classList.remove("disabled-button");
+agotadoImg.style.display = 'none';
+
+const confirmationMessage = document.getElementById('confirmation-message');
+if (confirmationMessage.classList.contains('hidden')) {
+smartButtonContainer.classList.add("disabled-button");
+
+}
+
+
+    paypal.Buttons({
+      style: {
+        shape: 'rect',
+        color: 'gold',
+        layout: 'vertical',
+        label: 'paypal'
+      },
+      createOrder: function(data, actions) {
+        return actions.order.create({
+          purchase_units: [{"amount":{"currency_code":"USD","value":price}}]
+        });
+      },
+      onApprove: function(data, actions) {
+        return actions.order.capture().then(function(orderData) {
+          console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+          const element = document.getElementById('paypal-button-container');
+          element.innerHTML = '';
+          element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+fetch('https://maker.ifttt.com/trigger/pago_info/json/with/key/knrtffu4-53xX4KmSxqYByUbObUZMvjXB-xRS9y9Nsp', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({correo: 'example@mail.com'})
+      });
+        });
+      },
+      onError: function(err) {
+        console.log(err);
+      }
+    }).render('#paypal-button-container');}
+  });
+});
+
+
+</script>
+
+<<<<<<< master
+<!-- 
+  <div class="wh<!-- 
+  <div class="whatsapp-btn-container">
+   <div class="ws-logo">
+    <img src="http://localhost:9898/Local/TeleLatinoStore/ws.png" alt="logo" href="https://wa.me/56927381682">
+    
+<div class="whatsapp-btn-container">
+        <a class="whatsapp-btn" href="https://wa.me/91999999999">
+         <img src="http://localhost:9898/Local/TeleLatinoStore/ws.png" alt="logo">
+         <i class="fab fa-whatsapp"></i>
+        </a>
+        <span>Contact Us</span>
+  </div>
+  
+   
+   </div>
+  </div>
+
+
+<div class="whatsapp-btn-container">
+        <a class="whatsapp-btn" href="https://wa.me/91999999999">
+         <img src="http://localhost:9898/Local/TeleLatinoStore/ws.png" alt="logo">
+        </a>
+  </div>
+
+<a +56927381682>
+         <img src="http://localhost:9898/Local/TeleLatinoStore/ws.png" class="whatsapp-btn">
+  <i class="fa fa-whatsapp"></i>
+</a>
+
+-->
+
+<div class="whatsapp_chat_support wcs_fixed_right">
+  
+    <div onclick="window.location.href='https://wa.me/56927381682'" class="wcs_button wcs_button_circle">
+    <!--<a href="https://wa.me/56927381682">-->
+        <span class="fa fa-whatsapp" ></span>
+    </div>  
+ 
+    
+        
+       
+    
+</div>
+
+
+    <!-- jQuery 1.8+ -->
+<script src="plugin/components/jQuery/jquery-1.11.3.min.js"></script>
+    <!-- Plugin JS file -->
+<script src="plugin/components/moment/moment.min.js"></script>
+<script src="plugin/components/moment/moment-timezone-with-data.min.js"></script> <!-- spanish language (es) -->
+<script src="plugin/whatsapp-chat-support.js"></script>
+
+>>>>>>>-master
+upport wcs_fixed_right" id="button-w">
+    <div class="wcs_button_label">
+            Contáctanos
+        </div>  
+    <div class="wcs_button wcs_button_circle">
+        <span class="fa fa-whatsapp"></span>
+    </div>  
+ 
+    <div class="wcs_popup">
+        <div class="wcs_popup_close">
+            <span class="fa fa-close"></span>
+        </div>
+        <div class="wcs_popup_header">
+            <span class="fa fa-whatsapp"></span>
+            <strong>Servicio al cliente</strong>
+            
+            <div class="wcs_popup_header_description">¿Necesidad de ayuda? Chatea con nosotros en Whatsapp</div>
+
+        </div>  
+        <div class="wcs_popup_input" 
+            data-number="56993500575"
+            data-availability='{ "monday":"07:00-22:30", "tuesday":"07:00-22:30", "wednesday":"07:7030-22:30", "thursday":"07:00-22:30", "friday":"07:00-22:30", "saturday":"09:00-18:30", "sunday":"09:00-22:30" }'>
+            <input type="text" placeholder="Escribir pregunta!" />
+            <i class="fa fa-play"></i>
+        </div>
+        <div class="wcs_popup_avatar">
+            <img src="https://avatars.githubusercontent.com/janl?s=180" alt="">
+        </div>
+    </div>
+</div>
+
+>>>>>>> origin/master
 </body>
 </html>
