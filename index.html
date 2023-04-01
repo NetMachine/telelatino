@@ -231,12 +231,12 @@ const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" on
 
 //document.cookie = "nombre=" + nombre + "; correo=" + mail;
 
-localStorage.setItem('nombre', nombre); // no hace falta usar ${} aquí
+//localStorage.setItem('nombre', nombre); // no hace falta usar ${} aquí
 
-localStorage.setItem('mail', mail); // tampoco hace falta usar ${} aquí
+//localStorage.setItem('mail', mail); // tampoco hace falta usar ${} aquí
 
-const mailLocal = localStorage.getItem('mail');
-alert(mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
+//const mailLocal = localStorage.getItem('mail');
+//alert(mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
 
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
