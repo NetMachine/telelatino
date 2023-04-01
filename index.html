@@ -256,9 +256,9 @@ const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" on
 
 //document.cookie = "nombre=" + nombre + "correo=" + mail;
 
-document.cookie = "nombre= ${nombre}";
+document.cookie = "nombre=" + nombre;
 
-document.cookie = "correo= ${mail}";
+document.cookie = "correo=" + mail";
 
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
