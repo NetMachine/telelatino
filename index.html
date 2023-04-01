@@ -273,7 +273,7 @@ const cookieArray = cookieString.split('; ');
 let userEmailCookie = '';
 
 for (let i = 0; i < cookieArray.length; i++) {
-  if (cookieArray[i].startsWith('user_email=')) {
+  if (cookieArray[i].startsWith('correo=')) {
     userEmailCookie = cookieArray[i];
     break;
   }
