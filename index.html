@@ -114,7 +114,7 @@
 document.addEventListener("DOMContentLoaded", function() {
 
  const mailLocal = localStorage.getItem('mail');
-alert(mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
+//alert(mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
 });
 
 function cambiarSesion(){
@@ -242,7 +242,7 @@ const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" on
 localStorage.setItem('mail', mail); // tampoco hace falta usar ${} aquí
 
 const mailLocal = localStorage.getItem('mail');
-alert(mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
+//alert(mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
 
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
