@@ -124,29 +124,10 @@ confirmationMessage.classList.add('hidden');
 
 document.addEventListener("DOMContentLoaded", function() {
   // Leer la cookie
-  var cookie = document.cookie;
-  var nombre = localStorage.getItem('mail');
-alert(nombre); 
-
-  // Verificar si la información del correo electrónico está presente en la cookie
-  if (cookie.includes("correo=")) {
-    // La información del correo electrónico está guardada en la cookie
-
-   const formWrapper = document.querySelector('.form-wrapper');
-
-const confirmationMessage = document.getElementById('confirmation-message');
-formWrapper.classList.remove('hidden');
-confirmationMessage.classList.add('hidden');
-   alert("chupa1");
-    console.log("La información del correo electrónico está guardada en la cookie");
-    // Obtener el valor del correo electrónico de la cookie
-    var correo = cookie.match(/correo=([^;]+)/)[1];
-    console.log("Correo electrónico guardado: " + correo);
-  } else {
-   //alert("chupa2");
-    // La información del correo electrónico no está guardada en la cookie
-    console.log("La información del correo electrónico no está guardada en la cookie");
-  }
+  //var cookie = document.cookie;
+  var mailLocal = localStorage.getItem('mail');
+    alert(mailLocal); 
+   
 });
   
 
@@ -256,45 +237,12 @@ const mail = document.getElementById('mail').value;
 
 const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" onclick="cambiarSesion()">Cambiar</a>`
 
-document.cookie = "nombre=" + nombre + "; correo=" + mail;
+//document.cookie = "nombre=" + nombre + "; correo=" + mail;
 
 localStorage.setItem('nombre', ${nombre});
 
 localStorage.setItem('mail', ${mail});
 
-// Obtener el correo electrónico guardado en la cookie
-//const userEmail = document.cookie.replace(/(?:(?:^|.*;\s*)correo\s*=\s*([^;]*).*$)|^.*$/, "$1");
-
-// Verificar si la cookie se ha guardado correctamente
-//if (userEmail) {
-  //alert(`El correo electrónico ${userEmail} se ha guardado en la cookie.`);
-//} else {
-  //alert('No se ha encontrado la cookie "user_email".');
-//}
-
-// Buscar la cookie específica que contiene el correo electrónico
-const cookieString = document.cookie;
-const cookieArray = cookieString.split('; ');
-let userEmailCookie = '';
-
-for (let i = 0; i < cookieArray.length; i++) {
-  if (cookieArray[i].startsWith('correo=')) {
-    userEmailCookie = cookieArray[i];
-    break;
-  }
-}
-
-// Comprobar si la cookie contiene un valor válido
-if (userEmailCookie) {
-  const userEmail = userEmailCookie.split('=')[1];
-  if (userEmail) {
-    alert(`El correo electrónico ${userEmail} se ha guardado en la cookie.`);
-  } else {
-    alert('El valor de la cookie "user_email" no es válido.');
-  }
-} else {
-  alert('No se ha encontrado la cookie "user_email".');
-}
 
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
