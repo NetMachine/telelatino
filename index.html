@@ -254,7 +254,11 @@ const mail = document.getElementById('mail').value;
 
 const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" onclick="cambiarSesion()">Cambiar</a>`
 
-document.cookie = "nombre=" + nombre + "; correo=" + mail;
+//document.cookie = "nombre=" + nombre + "correo=" + mail;
+
+document.cookie = "nombre= ${nombre}";
+
+document.cookie = "correo= ${mail}";
 
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
