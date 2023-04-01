@@ -261,11 +261,11 @@ document.cookie = "nombre=" + nombre + "; correo=" + mail;
 const userEmail = document.cookie.replace(/(?:(?:^|.*;\s*)correo\s*=\s*([^;]*).*$)|^.*$/, "$1");
 
 // Verificar si la cookie se ha guardado correctamente
-if (userEmail) {
+//if (userEmail) {
   alert(`El correo electrónico ${userEmail} se ha guardado en la cookie.`);
-} else {
-  alert('No se ha encontrado la cookie "user_email".');
-}
+//} else {
+  //alert('No se ha encontrado la cookie "user_email".');
+//}
 
 
 confirmationMessage.innerHTML = message;
