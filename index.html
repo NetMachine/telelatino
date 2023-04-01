@@ -141,7 +141,7 @@ confirmationMessage.classList.add('hidden');
     var correo = cookie.match(/correo=([^;]+)/)[1];
     console.log("Correo electrónico guardado: " + correo);
   } else {
-   alert("chupa2");
+   //alert("chupa2");
     // La información del correo electrónico no está guardada en la cookie
     console.log("La información del correo electrónico no está guardada en la cookie");
   }
@@ -290,14 +290,6 @@ if (userEmailCookie) {
 } else {
   alert('No se ha encontrado la cookie "user_email".');
 }
-
-
-if (document.cookie.includes('user_email')) {
-  alert('La cookie "user_email" todavía existe.');
-} else {
-  alert('La cookie "user_email" ha sido eliminada.');
-}
-
 
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
