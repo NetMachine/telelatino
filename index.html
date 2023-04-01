@@ -223,7 +223,6 @@ document.getElementById("loading").classList.add("hidden");
 smartButtonContainer.classList.remove("disabled-button");
 formWrapper.classList.add('hidden');
 
-
 const nombre = document.getElementById('nombre').value;
 const mail = document.getElementById('mail').value;
 //const message = `Sesión: <a href="mailto:${mail}">${mail}</a>`;
@@ -232,12 +231,12 @@ const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" on
 
 //document.cookie = "nombre=" + nombre + "; correo=" + mail;
 
-localStorage.setItem('nombre', ${nombre});
+localStorage.setItem('nombre', nombre); // no hace falta usar ${} aquí
 
-localStorage.setItem('mail', ${mail});
+localStorage.setItem('mail', mail); // tampoco hace falta usar ${} aquí
 
 const mailLocal = localStorage.getItem('mail');
-alert(mailLocal);
+alert(mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
 
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
