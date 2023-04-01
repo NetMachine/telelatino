@@ -254,11 +254,7 @@ const mail = document.getElementById('mail').value;
 
 const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" onclick="cambiarSesion()">Cambiar</a>`
 
-//document.cookie = "nombre=" + nombre + "correo=" + mail;
-
-document.cookie = "nombre=" + nombre;
-
-document.cookie = "correo=" + mail";
+document.cookie = "nombre=" + nombre + "; correo=" + mail;
 
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
@@ -483,19 +479,15 @@ fetch('https://maker.ifttt.com/trigger/pago_info/json/with/key/knrtffu4-53xX4KmS
    
    </div>
   </div>
-
-
 <div class="whatsapp-btn-container">
         <a class="whatsapp-btn" href="https://wa.me/91999999999">
          <img src="http://localhost:9898/Local/TeleLatinoStore/ws.png" alt="logo">
         </a>
   </div>
-
 <a +56927381682>
          <img src="http://localhost:9898/Local/TeleLatinoStore/ws.png" class="whatsapp-btn">
   <i class="fa fa-whatsapp"></i>
 </a>
-
 -->
 
 <div class="whatsapp_chat_support wcs_fixed_right">
