@@ -125,6 +125,8 @@ confirmationMessage.classList.add('hidden');
 document.addEventListener("DOMContentLoaded", function() {
   // Leer la cookie
   var cookie = document.cookie;
+  var nombre = localStorage.getItem('mail');
+alert(nombre); 
 
   // Verificar si la información del correo electrónico está presente en la cookie
   if (cookie.includes("correo=")) {
@@ -256,6 +258,9 @@ const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" on
 
 document.cookie = "nombre=" + nombre + "; correo=" + mail;
 
+localStorage.setItem('nombre', ${nombre});
+
+localStorage.setItem('mail', ${mail});
 
 // Obtener el correo electrónico guardado en la cookie
 //const userEmail = document.cookie.replace(/(?:(?:^|.*;\s*)correo\s*=\s*([^;]*).*$)|^.*$/, "$1");
