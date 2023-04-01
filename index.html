@@ -232,10 +232,12 @@ const message = `<b>Sesión:</b> <i>${mail}</i> <a href="javascript:void(0);" on
 
 //document.cookie = "nombre=" + nombre + "; correo=" + mail;
 
-//localStorage.setItem('nombre', ${nombre});
+localStorage.setItem('nombre', ${nombre});
 
-//localStorage.setItem('mail', ${mail});
+localStorage.setItem('mail', ${mail});
 
+var mailLocal = localStorage.getItem('mail');
+alert(mailLocal);
 
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
