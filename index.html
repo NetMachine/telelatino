@@ -292,6 +292,13 @@ if (userEmailCookie) {
 }
 
 
+if (document.cookie.includes('user_email')) {
+  alert('La cookie "user_email" todavía existe.');
+} else {
+  alert('La cookie "user_email" ha sido eliminada.');
+}
+
+
 confirmationMessage.innerHTML = message;
     formWrapper.classList.add('hidden');
     confirmationMessage.classList.remove('hidden');
