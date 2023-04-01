@@ -111,6 +111,12 @@
 
 <script>
 
+document.addEventListener("DOMContentLoaded", function() {
+
+ const mailLocal = localStorage.getItem('mail');
+alert(mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
+});
+
 function cambiarSesion(){
 
 const formWrapper = document.querySelector('.form-wrapper');
