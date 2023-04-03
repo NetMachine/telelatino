@@ -16,6 +16,8 @@ body {
   max-width: 550px;
   margin: 0 auto;
   padding: 10px;
+  overflow-x: hidden; /* Ocultar la barra de desplazamiento horizontal */
+  overflow-y: auto;
 
 }
 /* Estilos de la página de producto */
