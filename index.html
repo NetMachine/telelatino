@@ -219,8 +219,11 @@ const mailLocal = localStorage.getItem('mail');
 const nombreLocal = localStorage.getItem('nombre');
 //alert(mailLocal);
 
-const text = "NUEVA VENTA!\nNombre: " + nombreLocal + "\nCorreo: " + mailLocal + "\nPrecio: " + price + "\nMeses: " + meses + "\nData: " + dataPayPal;
-//alert(text);
+const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+const date = new Date();
+const formattedDate = date.toLocaleDateString('es-CL', options);
+
+const text = "NUEVA VENTA!\nNombre: " + nombreLocal + "\nCorreo: " + mailLocal + "\nPrecio: " + price + "\nMeses: " + meses + "\nFecha: " + formattedDate +"\nData: " + dataPayPal;
 
 fetch('https://hook.us1.make.com/9ay3sh456krt6f4drqvngd70qadtx4uc', {
   method: 'POST',
@@ -434,7 +437,11 @@ const nombre2 = document.getElementById('nombre').value;
 const mailLocal = localStorage.getItem('mail');
 const nombreLocal = localStorage.getItem('nombre');
 
-const text = "NUEVA VENTA!\nNombre: " + nombreLocal + "\nCorreo: " + mailLocal + "\nPrecio: " + price + "\nMeses: " + meses + "\nData: " + dataPayPal;
+const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+const date = new Date();
+const formattedDate = date.toLocaleDateString('es-CL', options);
+
+const text = "NUEVA VENTA!\nNombre: " + nombreLocal + "\nCorreo: " + mailLocal + "\nPrecio: " + price + "\nMeses: " + meses + "\nFecha: " + formattedDate +"\nData: " + dataPayPal;
 
 fetch('https://hook.us1.make.com/9ay3sh456krt6f4drqvngd70qadtx4uc', {
   method: 'POST',
