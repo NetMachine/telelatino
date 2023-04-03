@@ -12,7 +12,8 @@ body {
 }
 
 .container {
-  max-width: 660px;
+  //max-width: 100%;
+  max-width: 550px;
   margin: 0 auto;
   padding: 10px;
 
@@ -42,6 +43,8 @@ body {
 .product-image img {
   //position: absolute;
   width: 100%;
+  //height:auto;
+  object-fit: contain;
 }
 
 .product-info {
@@ -221,6 +224,7 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  width: 100%;
   max-width: 600px;
   margin-top: -10px;
   margin-bottom: 0px;
@@ -276,23 +280,51 @@ border: none;
     padding-top: 5px;
   }
 }
-
 .imagen-footer {
   text-align: center; 
-  margin-bottom: 0;/* Centrar la imagen horizontalmente */
+  margin-bottom: 0; /* Centrar la imagen horizontalmente */
 }
 
 .imagen-footer img {
-  //transform: scaleX(-1);
-  max-width: 50px; /* Ajustar el ancho máximo de la imagen */
+  max-width: 40px; /* Ajustar el ancho máximo de la imagen */
   height: auto; /* Ajustar la altura de la imagen de manera proporcional */
+  transition: transform 0.2s ease; /* Agregar una transición suave a la animación */
+  cursor: pointer; /* Cambiar el cursor del mouse a una mano para indicar que la imagen es un enlace */
+  touch-action: manipulation; /* Permitir que la imagen reaccione al evento touchstart */
 }
+
+.imagen-footer img:active,
+.imagen-footer img:focus,
+.imagen-footer img:hover,
+.imagen-footer img.touch-active {
+  transform: scale(1.2); /* Hacer que la imagen crezca al 120% cuando se presiona con el mouse o se toca en pantalla táctil */
+}
+
+/* Agregar clase "touch-active" cuando se activa el evento "touchstart" */
+.imagen-footer img:active,
+.imagen-footer img:focus {
+  animation: touchstart 0.2s linear;
+}
+
+@keyframes touchstart {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
 
 .agotado-img {
   position: absolute;
   top: 0;
   left: 0;
 
+  //width: 100%;
   //right: 0;
   width: 100%;
   //max-width: 90%;
@@ -348,7 +380,7 @@ border: none;
 .main-form-wrapper {
 
 position: relative;
-min-height: 40px;
+min-height: 50px;
 width: 100%;
 //background-color: yellow;
 
@@ -396,7 +428,27 @@ input[type="text"], input[type="email"], textarea:focus {
 }
 
 
+  .input-wrapper {
+    position: relative;
+    width: 100%;
+  }
 
+  .borrar-texto {
+ position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+  }
 
 
 
@@ -477,9 +529,46 @@ input[type="text"], input[type="email"], textarea:focus {
 
 .chupala {
   color: #828282;
-  font-size: 13px;
-  margin: 0
-  //background-color: yellow;
+  font-size: 11px;
+  //margin: 0;
   position: absolute;
   bottom: 4px;
+  //left: 50%;
+  //top: 50%;
+  //transform: translate(-50%, -50%);
+  width: 100%;
+  line-height: 1.1;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  //height: 50px;
+  text-align: justify;
+  //overflow: hidden;
+  //text-overflow: ellipsis;
+  //white-space: nowrap;
+  /* Establece la anchura máxima del texto que deseas permitir antes de cortarlo */
+  //max-width: 100%;
+  //word-break: break-word;
+  /* Define un tamaño de fuente máximo */
+  //max-font-size: 13px;
+  /* Define un tamaño de fuente mínimo */
+  //min-font-size: 2px;
+  /* Reduce el tamaño de fuente si el texto excede el ancho máximo permitido */
+  //font-size: calc(100% * (20 / (1em * ((400 - 2 * 13) / (1.4 * 10 + 13))))); /* fórmula actualizada */
+  /* Asegura que el tamaño de fuente no sea mayor que el tamaño máximo */
+  //font-size: min(font-size, max-font-size);
+}
+
+@media screen and (min-aspect-ratio: 16/9) {
+  /* Estilos para pantallas más anchas que altas */
+.chupala{ 
+  font-size: 8px;
+  }
+}
+
+@media (orientation: portrait) {
+  /* Reglas CSS que se aplicarán cuando el dispositivo esté en modo vertical */
+}
+
+@media (orientation: landscape) {
+  /* Reglas CSS que se aplicarán cuando el dispositivo esté en modo horizontal */
 }
