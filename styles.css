@@ -13,7 +13,7 @@ body {
 
 .container {
   //max-width: 100%;
-  max-width: 520px;
+  max-width: 480px;
   margin: 0 auto;
   padding: 10px;
   overflow-x: hidden; /* Ocultar la barra de desplazamiento horizontal */
