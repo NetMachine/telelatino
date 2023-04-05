@@ -124,7 +124,7 @@ input[type="image"] {
   height: auto;
 }
 
-/* Estilos del footer 
+/* Estilos del footer
 footer {
   text-align: center;
   padding: 20px;
@@ -173,10 +173,6 @@ footer {
   align-items: center;
   margin-top: 10px;
 }
-
-
-
-
 .thumbnail-button {
   display: inline-block;
   background-color: #3366CC;
@@ -191,19 +187,16 @@ footer {
   transition: all 0.3s ease;
   box-shadow: 0px 2px 5px rgba(0,0,0,0.25);
 }
-
 .thumbnail-button:hover {
   background-color: #254D8B;
   color: #fff;
   box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
 }
-
 .thumbnail-button:active {
   background-color: #CC9933c;
   color: #fff;
   box-shadow: inset 0px 2px 5px rgba(0,0,0,0.25);
 }
-
 */
 
 /* Agrega estilos adicionales para los botones 3 meses, 6 meses y 12 meses */
@@ -212,11 +205,9 @@ footer {
 .thumbnail-button[data-months="3"] {
   background-color: #006633;
 }
-
 .thumbnail-button[data-months="6"] {
   background-color: #CC9933c;
 }
-
 .thumbnail-button[data-months="12"] {
   background-color: #CC3300;
 }
@@ -230,7 +221,7 @@ footer {
   max-width: 600px;
   margin-top: -10px;
   margin-bottom: 0px;
-  
+
 }
 
 .thumbnail-button {
@@ -283,7 +274,7 @@ border: none;
   }
 }
 .imagen-footer {
-  text-align: center; 
+  text-align: center;
   margin-bottom: 0; /* Centrar la imagen horizontalmente */
 }
 
@@ -340,8 +331,7 @@ border: none;
   //margin-left: 20px;
   //margin-right: 20px;
 }
-/*  
-
+/*
 .whatsapp-btn-container {
     z-index: 20;
     position: fixed;
@@ -352,23 +342,17 @@ border: none;
     animation: fade-up 1000ms forwards;
     animation-delay: 1000ms;
 }
-
 @keyframes fade-up {
     100% {
         bottom: 5px;
         opacity: 1;
     }
 }
-
-
-
-
 .whatsapp-btn-container .whatsapp-btn img{
     //position: absolute;
     width: 20%;
     z-index:10000;
 }
-
  */
 
 
@@ -562,7 +546,7 @@ input[type="text"], input[type="email"], textarea:focus {
 
 @media screen and (min-aspect-ratio: 16/9) {
   /* Estilos para pantallas más anchas que altas */
-.chupala{ 
+.chupala{
   font-size: 8px;
   }
 }
