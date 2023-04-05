@@ -1,108 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y87XMC18G7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-Y87XMC18G7');
-</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.5/dist/sweetalert2.min.css">
+    gtag('config', 'G-Y87XMC18G7');
+  </script>
+  <link rel="stylesheet" href="styles.css" async="true">
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tele Latino Store</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-lU4Hzg1iMDrnj6y9XKSOU3U6YNrNEBBTjIfAXazsmtKkzqzDQgM0yTfT9FliH79U" crossorigin="anonymous">
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	
-<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
 
-<script src="https://cdn.jsdelivr.net/npm/nodemailer@6.8.8/dist/nodemailer.min.js"></script>
 
-  <link rel="preload" href="/unmes.png" as="image">
-  <link rel="preload" href="/3meses.png" as="image">
-  <link rel="preload" href="6meses.png" as="image">
-  <link rel="preload" href="/12meses.png" as="image">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 
-  <link rel="stylesheet" href="styles.css">
+
+  <link rel="preload" href="/Users/felipeabarcia/Desktop/telelatino-master/unmes.png" as="image">
+  <link rel="preload" href="/Users/felipeabarcia/Desktop/telelatino-master/3meses.png" as="image">
+  <link rel="preload" href="/Users/felipeabarcia/Desktop/telelatino-master/6meses.png" as="image">
+  <link rel="preload" href="/Users/felipeabarcia/Desktop/telelatino-master/12meses.png" as="image">
+
+
   <link rel="stylesheet" href="plugin/components/Font Awesome/css/font-awesome.min.css">
-     <link rel="stylesheet" href="plugin/whatsapp-chat-support.css">
+  <link rel="stylesheet" href="plugin/whatsapp-chat-support.css">
 </head>
 <body>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.5/dist/sweetalert2.all.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.5/dist/sweetalert2.all.min.js"></script>
 
   <div class="container">
     <div class="product-container">
       <div class="product-image">
-        <img src="/unmes.png" alt="Product Image" id="product-img" style="display: block;">
-<img src="/agotado.png" alt="Agotado" id="product-img2 "class="agotado-img" style="display: none;">
+        <img src="/Users/felipeabarcia/Desktop/telelatino-master/unmes.png" alt="Product Image" id="product-img" style="display: block;">
+        <img src="/Users/felipeabarcia/Desktop/telelatino-master/agotado.png" alt="Agotado" id="product-img2 "class="agotado-img" style="display: none;">
       </div>
-  
-      <div class="thumbnail-container">
-  <button class="thumbnail-button active" data-price="4.90" data-price-normal="5.90" porcentaje="US$ 4.90 por mes" data-months="1" data-available="true" data-img="/unmes.png" value="1M">1 Mes</button>
-<button class="thumbnail-button" data-price="14.00" data-price-normal="15.90" porcentaje="US$ 4.67 por mes" data-months="3" data-available="true" data-img="/3meses.png" value="3M">3 Meses</button>
-<button class="thumbnail-button" data-price="26.00" data-price-normal="28.90" porcentaje="US$ 4.33 por mes" data-months="6" data-available="true" data-img="/6meses.png" value="6M">6 Meses</button>
-<button class="thumbnail-button" data-price="46.00" data-price-normal="48" porcentaje="US$ 3.29 por mes" data-months="12" data-available="false" data-img="/12meses.png" value="12M">12 Meses</button>
-</div>
 
       <div class="product-info">
         <h1>1 Mes</h1>
-        
+
         <div class="prices">
         <span class="normal-price">US$ 5.90</span>
         <span class="offer-price">US$ 4.90</span>
         <span class="discount-percentage">US$ 4.90 por mes</span>
       </div>
         <p>Dispositivos simultáneos: 3 TV + 3 Celulares
-<br>Canales en vivo (TV): +900 SD/HD
-<br>Canales en vivo (Celular): +600 SD/HD (720P)
-<br>Contenido VOD: +200,000 horas
-<br>HOT: Canales + VOD
-<br>Playback últimos 7 días</p>
+          <br>Canales en vivo (TV): +900 SD/HD
+          <br>Canales en vivo (Celular): +600 SD/HD (720P)
+          <br>Contenido VOD: +200,000 horas
+          <br>HOT: Canales + VOD
+          <br>Playback últimos 7 días</p>
 
+        <form id="my-form">
+          <div class="main-form-wrapper">
+            <div class="form-wrapper">
+              <div class="input-wrapper">
+                <input type="text" id="nombre" name="nombre" placeholder="Nombre Apellido">
+                <span class="borrar-texto">&times;</span>
+              </div>
+              <div class="input-wrapper">
+                <input type="email" id="mail" name="mail" placeholder="Correo electrónico">
+                <span class="borrar-texto">&times;</span>
+              </div>
+              <p style="text-align: justify;"><b>Nota:</b> Asegúrate de ingresar un correo electrónico válido durante el proceso de compra. Este correo electrónico será utilizado para enviarte la información de la nueva cuenta de Tele Latino.</p>
+              <button type="button" id="submit-button" onclick="validarCorreo()">Guardar</button>
+            </div>
+            <div id="confirmation-message" class="hidden chupala">prueba</div>
 
+            <div id="loading" class="hidden">
+              <div class="loader"></div>
+            </div>
 
-
-<form id="my-form">
-  <div class="main-form-wrapper">
-    <div class="form-wrapper">
-
-      <div class="input-wrapper">
-        <input type="text" id="nombre" name="nombre" placeholder="Nombre Apellido">
-        <span class="borrar-texto">&times;</span>
-      </div>
-
-      <div class="input-wrapper">
-        <input type="email" id="mail" name="mail" placeholder="Correo electrónico">
-        <span class="borrar-texto">&times;</span>
-      </div>
-
-      <p style="text-align: justify;"><b>Nota:</b> Asegúrate de ingresar un correo electrónico válido durante el proceso de compra. Este correo electrónico será utilizado para enviarte la información de la cuenta.</p>
-
-      <button type="button" id="submit-button" onclick="validarCorreo()">Guardar</button>
-
-    </div>
-
-    <div id="confirmation-message" class="hidden chupala">prueba</div>
-
-    <div id="loading" class="hidden">
-      <div class="loader"></div>
-    </div>
-
-  </div>
-</form>
-
-
-
-
-
+          </div>
+        </form>
 
         <div class="disabled-button" id="smart-button-container">
-
           <div style="text-align: center;">
             <div id="paypal-button-container"></div>
           </div>
@@ -111,9 +88,9 @@
     </div>
   </div>
 
-<div class="imagen-footer"><a href="https://www.tele-latino.com/ayuda">
-  <img src="/logo.png" alt="logo"></a>
-</div>
+  <div class="imagen-footer"><a href="https://www.tele-latino.com/ayuda">
+    <img src="/Users/felipeabarcia/Desktop/telelatino-master/logo.png" alt="logo"></a>
+  </div>
 
   <footer>
     <p>© 2023 Tele Latino Store</p>
@@ -121,52 +98,50 @@
 
 
   <script src="https://www.paypal.com/sdk/js?client-id=AfHXU2R5TcG1l1L0f69YAa67qJ-RsKHUh9-mYduiiaXMmxPj3P3_LHWba_yo7BE7pSyEg0W0c38nVDfw&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-  
 
-<!--
-<script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
--->
+
+  <!--
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+  -->
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
 
-const mailLocal = localStorage.getItem('mail');
-const nombreLocal = localStorage.getItem('nombre');
-//alert(nombreLocal+" "+ mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
+  const mailLocal = localStorage.getItem('mail');
+  const nombreLocal = localStorage.getItem('nombre');
+  //alert(nombreLocal+" "+ mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
 
-if (mailLocal === null || mailLocal === undefined || mailLocal === '') {
-  //alert('No se encontró correo electrónico en el almacenamiento local');
-} else {
-  //alert(nombreLocal +" "+ mailLocal);
-  const formWrapper = document.querySelector('.form-wrapper');
+  if (mailLocal === null || mailLocal === undefined || mailLocal === '') {
+    //alert('No se encontró correo electrónico en el almacenamiento local');
+  } else {
+    //alert(nombreLocal +" "+ mailLocal);
+    const formWrapper = document.querySelector('.form-wrapper');
 
-const confirmationMessage = document.getElementById('confirmation-message');
-formWrapper.classList.add('hidden');
-confirmationMessage.classList.remove('hidden');
-  const message = `<b>Sesión iniciada.</b> Los datos de la nueva cuenta de <b>TeleLatino</b> serán enviadas a <b><i>${mailLocal}.</i></b> <a href="javascript:void(0);" onclick="cambiarSesion()"><span style="font-size: 1.2em;">Borrar</span></a>`;
+    const confirmationMessage = document.getElementById('confirmation-message');
+    formWrapper.classList.add('hidden');
+    confirmationMessage.classList.remove('hidden');
+    const message = `<b>Sesión iniciada.</b> Los datos de la nueva cuenta de <b>TeleLatino</b> serán enviadas a <b><i>${mailLocal}.</i></b> <a href="javascript:void(0);" onclick="cambiarSesion()"><span style="font-size: 1.2em;">Borrar</span></a>`;
 
-confirmationMessage.innerHTML = message;
+    confirmationMessage.innerHTML = message;
 
-const smartButtonContainer = document.getElementById('smart-button-container');
-smartButtonContainer.classList.remove("disabled-button");      
+    const smartButtonContainer = document.getElementById('smart-button-container');
+    smartButtonContainer.classList.remove("disabled-button");
 
-}
-
-
+  }
 });
- 
+
 function cambiarSesion(){
 
-localStorage.removeItem('nombre');
-localStorage.removeItem('mail');
+  localStorage.removeItem('nombre');
+  localStorage.removeItem('mail');
 
-const formWrapper = document.querySelector('.form-wrapper');
+  const formWrapper = document.querySelector('.form-wrapper');
 
-const confirmationMessage = document.getElementById('confirmation-message');
-formWrapper.classList.remove('hidden');
-confirmationMessage.classList.add('hidden');
-const smartButtonContainer = document.getElementById('smart-button-container');
-smartButtonContainer.classList.add("disabled-button"); 
+  const confirmationMessage = document.getElementById('confirmation-message');
+  formWrapper.classList.remove('hidden');
+  confirmationMessage.classList.add('hidden');
+  const smartButtonContainer = document.getElementById('smart-button-container');
+  smartButtonContainer.classList.add("disabled-button");
 }
 
 
@@ -185,10 +160,9 @@ function initPayPalButton() {
             purchase_units: [{"amount":{"currency_code":"USD","value":4.90}}]
           });
         },
-
         onApprove: function(data, actions) {
           return actions.order.capture().then(function(orderData) {
-            
+
             // Full available details
             console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
 
@@ -197,143 +171,121 @@ function initPayPalButton() {
             element.innerHTML = '';
             element.innerHTML = '<h3>¡Gracias por tu compra!</h3><a href="javascript:void(0);" onclick="location.reload()"><span style="font-size: 1em;">Volver a empezar</span></a>';
 
-const confirmationMessage = document.getElementById('confirmation-message');
-confirmationMessage.classList.add('hidden');
-const button = document.querySelector('.thumbnail-button');
-const price = button.getAttribute('data-price');
-//const price = Document.getAttribute('data-price');
-//alert(price);
-const meses = button.getAttribute('data-months');
-//alert(meses);
-const dataPayPal =  JSON.stringify(orderData, null, 2);
-
-//alert(dataPayPal);
-//const confirmationMessager = document.getElementById('confirmation-message');
-//confirmationMessage.classList.add('hidden');
-
-//const correo2 = document.getElementById('mail').value;
-//alert(correo2);
-//const nombre2 = document.getElementById('nombre').value;
-
-const mailLocal = localStorage.getItem('mail');
-//alert(mailLocal);
-const nombreLocal = localStorage.getItem('nombre');
-//alert(mailLocal);
-
-const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-const date = new Date();
-const formattedDate = date.toLocaleDateString('es-CL', options);
-
-const text = "NUEVA VENTA!\nNombre: " + nombreLocal + "\nCorreo: " + mailLocal + "\nPrecio: " + price + "\nMeses: " + meses + "\nFecha: " + formattedDate +"\nData: " + dataPayPal;
-
-fetch('https://hook.us1.make.com/9ay3sh456krt6f4drqvngd70qadtx4uc', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'text/plain'
-  },
-  body: text
-});
+            const confirmationMessage = document.getElementById('confirmation-message');
+            confirmationMessage.classList.add('hidden');
+            const button = document.querySelector('.thumbnail-button');
+            const price = button.getAttribute('data-price');
+            const meses = button.getAttribute('data-months');
+            const dataPayPal =  JSON.stringify(orderData, null, 2);
 
 
+            const mailLocal = localStorage.getItem('mail');
+            //alert(mailLocal);
+            const nombreLocal = localStorage.getItem('nombre');
+            //alert(mailLocal);
+
+            const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+            const date = new Date();
+            const formattedDate = date.toLocaleDateString('es-CL', options);
+
+            const text = "NUEVA VENTA!\nNombre: " + nombreLocal + "\nCorreo: " + mailLocal + "\nPrecio: " + price + "\nMeses: " + meses + "\nFecha: " + formattedDate +"\nData: " + dataPayPal;
+
+            fetch('https://hook.us1.make.com/9ay3sh456krt6f4drqvngd70qadtx4uc', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'text/plain'
+              },
+              body: text
+            });
 
             // Or go to another URL:  actions.redirect('thank_you.html');
-            
           });
         },
-
         onError: function(err) {
           console.log(err);
         }
       }).render('#paypal-button-container');
-    } 
+    }
 
 initPayPalButton();
 
 
 function validarCorreo() {
-
-/*  
+/*
 const text = `probando`;
 fetch(`https://api.telegram.org/bot5681304304:AAEu-fET6lCdJiAiRnLHUNpLdR0j_5AF_k/sendMessage?chat_id=@K3rneLPanik&text=${text}`);
  */
 
-		
-const smartButtonContainer = document.getElementById('smart-button-container');
-
-const correo = document.getElementById('mail').value;
-const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-if (!regex.test(correo)) {
-    //alert('Correo electrónico inválido');
-    //return;
-
-Swal.fire({
-    title: 'Error',
-    text: 'Para poder continuar con la compra, debes ingresar un correo electrónico válido.',
-    icon: 'warning',
-    
-    confirmButtonText: 'Aceptar'
-  });
-  return;
-
-
-} else {
-const mailLocal = localStorage.getItem('mail');
-
-
-const formWrapper = document.querySelector('.form-wrapper');
-
-const confirmationMessage = document.getElementById('confirmation-message');
-
-document.getElementById("loading").classList.remove("hidden");
-
-confirmationMessage.classList.add('hidden');
-formWrapper.classList.add('hidden');
-
-setTimeout(function() {
-document.getElementById("loading").classList.remove("hidden");
-document.getElementById("loading").classList.add("hidden");
-
-
-
-formWrapper.classList.add('hidden');
-
-const nombre = document.getElementById('nombre').value;
-const mail = document.getElementById('mail').value;
-
-const message = `<b>Sesión iniciada.</b> Los datos de la nueva cuenta de <b>TeleLatino</b> serán enviadas a <b><i>${mail}.</i></b> <a href="javascript:void(0);" onclick="cambiarSesion()"><span style="font-size: 1.2em;">Borrar</span></a>`;
-
-
-
-confirmationMessage.innerHTML = message;
-
-
-localStorage.setItem('nombre', nombre); // no hace falta usar ${} aquí
-
-localStorage.setItem('mail', mail); // tampoco hace falta usar ${} aquí
-
-const mailLocal = localStorage.getItem('mail');
-const nombreLocal = localStorage.getItem('nombre');
-//alert(nombreLocal + mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
-
-
-
-confirmationMessage.innerHTML = message;
-    formWrapper.classList.add('hidden');
-    
-confirmationMessage.classList.remove('hidden');
-
-
-smartButtonContainer.classList.remove("disabled-button");
-//alert("chua2");
-//const buttons = document.querySelectorAll('.thumbnail-button');
-
-
-if (currentIndex == 3){
   const smartButtonContainer = document.getElementById('smart-button-container');
-smartButtonContainer.classList.add("disabled-button");      
-}
-  }, 1000);
 
+  const correo = document.getElementById('mail').value;
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!regex.test(correo)) {
+    Swal.fire({
+        title: 'Error',
+        text: 'Para poder continuar con la compra, debes ingresar un correo electrónico válido.',
+        icon: 'warning',
+
+        confirmButtonText: 'Aceptar'
+      });
+      return;
+  } else {
+    const mailLocal = localStorage.getItem('mail');
+
+
+    const formWrapper = document.querySelector('.form-wrapper');
+
+    const confirmationMessage = document.getElementById('confirmation-message');
+
+    document.getElementById("loading").classList.remove("hidden");
+
+    confirmationMessage.classList.add('hidden');
+    formWrapper.classList.add('hidden');
+
+    setTimeout(function() {
+      document.getElementById("loading").classList.remove("hidden");
+      document.getElementById("loading").classList.add("hidden");
+
+
+
+      formWrapper.classList.add('hidden');
+
+      const nombre = document.getElementById('nombre').value;
+      const mail = document.getElementById('mail').value;
+
+      const message = `<b>Sesión iniciada.</b> Los datos de la nueva cuenta de <b>TeleLatino</b> serán enviadas a <b><i>${mail}.</i></b> <a href="javascript:void(0);" onclick="cambiarSesion()"><span style="font-size: 1.2em;">Borrar</span></a>`;
+
+
+
+      confirmationMessage.innerHTML = message;
+
+
+      localStorage.setItem('nombre', nombre); // no hace falta usar ${} aquí
+
+      localStorage.setItem('mail', mail); // tampoco hace falta usar ${} aquí
+
+      const mailLocal = localStorage.getItem('mail');
+      const nombreLocal = localStorage.getItem('nombre');
+      //alert(nombreLocal + mailLocal); // muestra el correo electrónico guardado en el localStorage en una alerta
+
+
+
+      confirmationMessage.innerHTML = message;
+          formWrapper.classList.add('hidden');
+
+      confirmationMessage.classList.remove('hidden');
+
+
+      smartButtonContainer.classList.remove("disabled-button");
+      //alert("chua2");
+      //const buttons = document.querySelectorAll('.thumbnail-button');
+
+
+      if (currentIndex == 3){
+        const smartButtonContainer = document.getElementById('smart-button-container');
+      smartButtonContainer.classList.add("disabled-button");
+      }
+    }, 1000);
   }
 }
 
@@ -341,24 +293,44 @@ smartButtonContainer.classList.add("disabled-button");
 
 <script>
 const buttons = document.querySelectorAll('.thumbnail-button');
-
+var activeButton = null;
 buttons.forEach((button, index) => {
   button.addEventListener('click', () => {
 
     buttons.forEach(btn => {
-  
+
       btn.classList.remove('active');
     });
 
-    currentIndex = index;
     button.classList.add('active');
-    
+
     if (index == 3){
-const smartButtonContainer = document.getElementById('smart-button-container');
+      const smartButtonContainer = document.getElementById('smart-button-container');
 
-smartButtonContainer.classList.add("disabled-button");      
+      smartButtonContainer.classList.add("disabled-button");
 
-}
+    }
+    activeButton = this;
+
+    if (!button == this) {
+      alert("hueon");
+    }
+/*
+    for (var i = 0; i < buttons.length; i++) {
+
+      buttons[i].addEventListener("click", function() {
+      // Desactivar el botón activo anterior
+        if (activeButton !== null) {
+          activeButton.setAttribute("disabled", false);
+        }
+
+      // Establecer el botón actual como el botón activo y realizar cualquier acción necesaria
+      activeButton = this;
+      alert(this);
+      activeButton.setAttribute("disabled", true);
+      // Realizar cualquier acción necesaria en función del botón activo
+      });
+    }*/
 
     const img = button.getAttribute('data-img');
     const price = button.getAttribute('data-price');
@@ -366,47 +338,47 @@ smartButtonContainer.classList.add("disabled-button");
     const pricePorcentaje = button.getAttribute('porcentaje');
     const paypalButtonContainer = document.getElementById('paypal-button-container');
     const smartButtonContainer = document.getElementById('smart-button-container');
-const meses = button.getAttribute('data-months');
+    const meses = button.getAttribute('data-months');
 
     const isProductAvailable = button.getAttribute('data-available') === 'true';
 
 
-   document.querySelector('.product-image img').setAttribute('src', img);
+    document.querySelector('.product-image img').setAttribute('src', img);
     document.querySelector('.product-info h1').textContent = button.textContent;
     document.querySelector('.offer-price').textContent = `US$ ${price}`;
-document.querySelector('.normal-price').textContent = `US$ ${priceNormal}`;
-document.querySelector('.discount-percentage').textContent = `${pricePorcentaje}`;
+    document.querySelector('.normal-price').textContent = `US$ ${priceNormal}`;
+    document.querySelector('.discount-percentage').textContent = `${pricePorcentaje}`;
 
-const agotadoImg = document.querySelector('.agotado-img');
+    const agotadoImg = document.querySelector('.agotado-img');
 
     paypalButtonContainer.innerHTML = '';
 
-<!-->
-const confirmationMessage = document.getElementById('confirmation-message');
-if (confirmationMessage.classList.contains('hidden')) {
-smartButtonContainer.classList.add("disabled-button");
 
-} 
-     if (!isProductAvailable) {
+    const confirmationMessage = document.getElementById('confirmation-message');
+    if (confirmationMessage.classList.contains('hidden')) {
+      smartButtonContainer.classList.add("disabled-button");
 
-agotadoImg.style.display = 'block';
-smartButtonContainer.classList.add("disabled-button");      
+    }
 
-<!-------------------------->
-initPayPalButton();
-} 
+    if (!isProductAvailable) {
 
-else {
- 
-smartButtonContainer.classList.remove("disabled-button");
-agotadoImg.style.display = 'none';
+      agotadoImg.style.display = 'block';
+      smartButtonContainer.classList.add("disabled-button");
 
-const confirmationMessage = document.getElementById('confirmation-message');
+      initPayPalButton();
+    }
 
-if (confirmationMessage.classList.contains('hidden')) {
-smartButtonContainer.classList.add("disabled-button");
+    else {
 
-} 
+      smartButtonContainer.classList.remove("disabled-button");
+      agotadoImg.style.display = 'none';
+
+      const confirmationMessage = document.getElementById('confirmation-message');
+
+      if (confirmationMessage.classList.contains('hidden')) {
+        smartButtonContainer.classList.add("disabled-button");
+
+      }
 
     paypal.Buttons({
       style: {
@@ -426,32 +398,31 @@ smartButtonContainer.classList.add("disabled-button");
           const element = document.getElementById('paypal-button-container');
           element.innerHTML = '';
           element.innerHTML = '<h3>¡Gracias por tu compra!</h3><a href="javascript:void(0);" onclick="location.reload()"><span style="font-size: 1em;">Volver a empezar</span></a>';
-//alert(JSON.stringify(orderData, null, 2));
+          //alert(JSON.stringify(orderData, null, 2));
 
-const dataPayPal =  JSON.stringify(orderData, null, 2);
-const confirmationMessager = document.getElementById('confirmation-message');
-confirmationMessage.classList.add('hidden');
+          const dataPayPal =  JSON.stringify(orderData, null, 2);
+          const confirmationMessager = document.getElementById('confirmation-message');
+          confirmationMessage.classList.add('hidden');
 
-const correo2 = document.getElementById('mail').value;
-const nombre2 = document.getElementById('nombre').value;
+          const correo2 = document.getElementById('mail').value;
+          const nombre2 = document.getElementById('nombre').value;
 
-const mailLocal = localStorage.getItem('mail');
-const nombreLocal = localStorage.getItem('nombre');
+          const mailLocal = localStorage.getItem('mail');
+          const nombreLocal = localStorage.getItem('nombre');
 
-const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
-const date = new Date();
-const formattedDate = date.toLocaleDateString('es-CL', options);
+          const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+          const date = new Date();
+          const formattedDate = date.toLocaleDateString('es-CL', options);
 
-const text = "NUEVA VENTA!\nNombre: " + nombreLocal + "\nCorreo: " + mailLocal + "\nPrecio: " + price + "\nMeses: " + meses + "\nFecha: " + formattedDate +"\nData: " + dataPayPal;
+          const text = "NUEVA VENTA!\nNombre: " + nombreLocal + "\nCorreo: " + mailLocal + "\nPrecio: " + price + "\nMeses: " + meses + "\nFecha: " + formattedDate +"\nData: " + dataPayPal;
 
-fetch('https://hook.us1.make.com/9ay3sh456krt6f4drqvngd70qadtx4uc', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'text/plain'
-  },
-  body: text
-});
-
+          fetch('https://hook.us1.make.com/9ay3sh456krt6f4drqvngd70qadtx4uc', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'text/plain'
+            },
+            body: text
+          });
         });
       },
       onError: function(err) {
@@ -460,9 +431,7 @@ fetch('https://hook.us1.make.com/9ay3sh456krt6f4drqvngd70qadtx4uc', {
     }).render('#paypal-button-container');}
   });
 });
-
 </script>
-
 
 <script>
   const inputs = document.querySelectorAll('input');
@@ -471,26 +440,62 @@ fetch('https://hook.us1.make.com/9ay3sh456krt6f4drqvngd70qadtx4uc', {
   botonesBorrar.forEach((boton, index) => {
     boton.addEventListener('click', () => {
       inputs[index].value = '';
-       
+
     });
   });
 </script>
 
+<script>
+var buttons2 = document.querySelectorAll('.thumbnail-button');
+
+function resetButtons() {
+  // Restablece la clase 'active', el tamaño y el halo de enfoque de cada botón
+  buttons2.forEach(button => {
+    //console.log(button);
+    //button.classList.add('active');
+    button.style.transform = 'scale(1)';
+    //button.blur();
+  });
+}
+
+document.addEventListener('mouseup', function(event) {
+  // Si se hace clic fuera de cualquier botón
+  if (!Array.from(buttons2).some(button => button.contains(event.target))) {
+    resetButtons();
+  }
+});
+
+buttons2.forEach(function(button) {
+  button.addEventListener('click', function(event) {
+    // Elimina la clase 'active', el tamaño y el halo de enfoque de cada botón
+    resetButtons();
+
+    // Agrega la clase 'active' al botón seleccionado y cambia su tamaño
+    this.classList.add('active');
+    this.style.transform = 'scale(1.1)';
+  });
+});
+
+window.addEventListener('resize', function(event) {
+  // Restablece la clase 'active', el tamaño y el halo de enfoque de cada botón
+  resetButtons();
+});
 
 
+</script>
+
+<script>
+  var enlace = document.createElement("link");
+  enlace.rel = "stylesheet";
+  enlace.href = "styles.css";
+  enlace.async = true;
+  document.head.appendChild(enlace);
+</script>
 
 <div class="whatsapp_chat_support wcs_fixed_right">
-  
    <div onclick="window.location.href='https://wa.me/56927381682'" class="wcs_button wcs_button_circle">
-    <!--<a href="https://wa.me/56927381682">-->
-
         <span class="fa fa-whatsapp" ></span>
-    </div>  
- 
-    
-        
-       
-    
+   </div>
 </div>
 
 <!--
@@ -518,9 +523,10 @@ window.addEventListener("load", function() {
 
   // cambiar el ancho del contenedor en función del tamaño de la imagen
   container.style.width = productImg.offsetWidth + "px";
-}); 
+});
 
 </script> -->
+
     <!-- jQuery 1.8+ -->
 <script src="plugin/components/jQuery/jquery-1.11.3.min.js"></script>
     <!-- Plugin JS file -->
