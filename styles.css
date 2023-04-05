@@ -419,13 +419,12 @@ input[type="text"], textarea:focus {
   line-height: 1.1;
   margin-bottom: 5px;
   margin-top: 5px;
+  text-align: left;
 }
 
 @media screen and (min-aspect-ratio: 16/9) {
   /* Estilos para pantallas más anchas que altas */
-.chupala{
-  font-size: 8px;
-  }
+
 }
 
 @media (orientation: portrait) {
