@@ -346,31 +346,31 @@ buttons.forEach((button, index) => {
     setTimeout(() => {
       document.querySelector('.product-image img').setAttribute('src', img);
       fadeIn(document.querySelector('.product-image img'));
-    }, 500);
+    }, 550);
 
     fadeOut(document.querySelector('.product-info h1'));
     setTimeout(() => {
       document.querySelector('.product-info h1').textContent = button.textContent;
       fadeIn(document.querySelector('.product-info h1'));
-    }, 500);
+    }, 550);
 
     fadeOut(document.querySelector('.offer-price'));
     setTimeout(() => {
       document.querySelector('.offer-price').textContent = `US$${price}`;
       fadeIn(document.querySelector('.offer-price'));
-    }, 500);
+    }, 550);
 
     fadeOut(document.querySelector('.normal-price'));
     setTimeout(() => {
       document.querySelector('.normal-price').textContent = `US$${priceNormal}`;
       fadeIn(document.querySelector('.normal-price'));
-    }, 500);
+    }, 550);
 
     fadeOut(document.querySelector('.discount-percentage'));
     setTimeout(() => {
       document.querySelector('.discount-percentage').textContent = `${pricePorcentaje}`;
       fadeIn(document.querySelector('.discount-percentage'));
-    }, 500);
+    }, 550);
 
 
 
@@ -390,7 +390,7 @@ buttons.forEach((button, index) => {
   setTimeout(() => {
     agotadoImg.style.display = 'block';
     fadeIn(agotadoImg);
-  }, 500);
+  }, 550);
 
     
       
@@ -403,7 +403,7 @@ buttons.forEach((button, index) => {
   setTimeout(() => {
     agotadoImg.style.display = 'none';
     fadeIn(agotadoImg);
-  }, 500);
+  }, 550);
 
       const confirmationMessage = document.getElementById('confirmation-message');
 
