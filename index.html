@@ -297,11 +297,24 @@ fetch(`https://api.telegram.org/bot5681304304:AAEu-fET6lCdJiAiRnLHUNpLdR0j_5AF_k
 </script>
 
 <script>
+
+function fadeOut(element) {
+  element.style.transition = "opacity 0.5s ease";
+  element.style.opacity = "0";
+}
+
+function fadeIn(element) {
+  element.style.transition = "opacity 0.5s ease";
+  element.style.opacity = "1";
+}
 const buttons = document.querySelectorAll('.thumbnail-button');
-var activeButton = null;
+
 buttons.forEach((button, index) => {
   button.addEventListener('click', () => {
-
+    if (button.classList.contains('active')) {
+      // El botón ya está activo, no hagas nada
+      return;
+    }
     buttons.forEach(btn => {
 
       btn.classList.remove('active');
@@ -309,33 +322,13 @@ buttons.forEach((button, index) => {
 
     button.classList.add('active');
 
+
     if (index == 3){
       const smartButtonContainer = document.getElementById('smart-button-container');
 
       smartButtonContainer.classList.add("disabled-button");
 
     }
-    activeButton = this;
-
-    if (!button == this) {
-      alert("hueon");
-    }
-/*
-    for (var i = 0; i < buttons.length; i++) {
-
-      buttons[i].addEventListener("click", function() {
-      // Desactivar el botón activo anterior
-        if (activeButton !== null) {
-          activeButton.setAttribute("disabled", false);
-        }
-
-      // Establecer el botón actual como el botón activo y realizar cualquier acción necesaria
-      activeButton = this;
-      alert(this);
-      activeButton.setAttribute("disabled", true);
-      // Realizar cualquier acción necesaria en función del botón activo
-      });
-    }*/
 
     const img = button.getAttribute('data-img');
     const price = button.getAttribute('data-price');
@@ -344,39 +337,73 @@ buttons.forEach((button, index) => {
     const paypalButtonContainer = document.getElementById('paypal-button-container');
     const smartButtonContainer = document.getElementById('smart-button-container');
     const meses = button.getAttribute('data-months');
-
+    const agotadoImg = document.querySelector('.agotado-img');
     const isProductAvailable = button.getAttribute('data-available') === 'true';
 
 
-    document.querySelector('.product-image img').setAttribute('src', img);
-    document.querySelector('.product-info h1').textContent = button.textContent;
-    document.querySelector('.offer-price').textContent = `US$ ${price}`;
-    document.querySelector('.normal-price').textContent = `US$ ${priceNormal}`;
-    document.querySelector('.discount-percentage').textContent = `${pricePorcentaje}`;
 
-    const agotadoImg = document.querySelector('.agotado-img');
+    fadeOut(document.querySelector('.product-image img'));
+    setTimeout(() => {
+      document.querySelector('.product-image img').setAttribute('src', img);
+      fadeIn(document.querySelector('.product-image img'));
+    }, 500);
 
-    paypalButtonContainer.innerHTML = '';
+    fadeOut(document.querySelector('.product-info h1'));
+    setTimeout(() => {
+      document.querySelector('.product-info h1').textContent = button.textContent;
+      fadeIn(document.querySelector('.product-info h1'));
+    }, 500);
+
+    fadeOut(document.querySelector('.offer-price'));
+    setTimeout(() => {
+      document.querySelector('.offer-price').textContent = `US$ ${price}`;
+      fadeIn(document.querySelector('.offer-price'));
+    }, 500);
+
+    fadeOut(document.querySelector('.normal-price'));
+    setTimeout(() => {
+      document.querySelector('.normal-price').textContent = `US$ ${priceNormal}`;
+      fadeIn(document.querySelector('.normal-price'));
+    }, 500);
+
+    fadeOut(document.querySelector('.discount-percentage'));
+    setTimeout(() => {
+      document.querySelector('.discount-percentage').textContent = `${pricePorcentaje}`;
+      fadeIn(document.querySelector('.discount-percentage'));
+    }, 500);
+
+
+
+    //paypalButtonContainer.innerHTML = '';
 
 
     const confirmationMessage = document.getElementById('confirmation-message');
     if (confirmationMessage.classList.contains('hidden')) {
       smartButtonContainer.classList.add("disabled-button");
+      
 
     }
 
     if (!isProductAvailable) {
-
-      agotadoImg.style.display = 'block';
       smartButtonContainer.classList.add("disabled-button");
+      fadeOut(agotadoImg);
+  setTimeout(() => {
+    agotadoImg.style.display = 'block';
+    fadeIn(agotadoImg);
+  }, 500);
 
-      initPayPalButton();
+    
+      
     }
 
     else {
 
       smartButtonContainer.classList.remove("disabled-button");
-      agotadoImg.style.display = 'none';
+      fadeOut(agotadoImg);
+  setTimeout(() => {
+    agotadoImg.style.display = 'none';
+    fadeIn(agotadoImg);
+  }, 500);
 
       const confirmationMessage = document.getElementById('confirmation-message');
 
@@ -384,7 +411,7 @@ buttons.forEach((button, index) => {
         smartButtonContainer.classList.add("disabled-button");
 
       }
-
+    paypalButtonContainer.innerHTML = '';
     paypal.Buttons({
       style: {
         shape: 'rect',
@@ -437,7 +464,7 @@ buttons.forEach((button, index) => {
   });
 });
 </script>
-
+  
 <script>
   const inputs = document.querySelectorAll('input');
   const botonesBorrar = document.querySelectorAll('.borrar-texto');
