@@ -18,7 +18,7 @@ body {
   padding: 10px;
   overflow-x: hidden; /* Ocultar la barra de desplazamiento horizontal */
   overflow-y: auto;
-  min-width: 380px;
+  //min-width: 380px;
 
 
 }
