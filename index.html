@@ -523,7 +523,14 @@ window.addEventListener('resize', function(event) {
   enlace.async = true;
   document.head.appendChild(enlace);
 </script>
-
+<script>
+ if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js');
+  });
+}
+ 
+</script>
 <div class="whatsapp_chat_support wcs_fixed_right">
    <div onclick="window.location.href='https://wa.me/56927381682'" class="wcs_button wcs_button_circle">
         <span class="fa fa-whatsapp" ></span>
