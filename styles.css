@@ -435,7 +435,7 @@ input[type="text"], textarea:focus {
 @media (orientation: landscape) {
   /* Reglas CSS que se aplicarán cuando el dispositivo esté en modo horizontal */
 }
-@media (max-width: 375px) {
+@media (max-width: 320px) {
   .container {
     max-width: 100%;
   }
